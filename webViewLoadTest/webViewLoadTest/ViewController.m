@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OriginRequestVC.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view, typically from a nib.
+    self.url = @"https://github.com/";
+    
+    NSArray *txtAry = @[@"Just Request"];
+    
+    NSInteger idx = 0;
+    for (NSString *title in txtAry) {
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 50*idx + 88, 200, 50)];
+        [btn setTitle:title forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(choseBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = idx++;
+        [self.view addSubview:btn];
+    }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)choseBtnClick:(UIButton *)sender {
+    switch (sender.tag) {
+        case 0: {
+            [TimeManager refreshTime];
+            OriginRequestVC *vc = [[OriginRequestVC alloc] init];
+            vc.url = self.url;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
 }
-
-
 @end

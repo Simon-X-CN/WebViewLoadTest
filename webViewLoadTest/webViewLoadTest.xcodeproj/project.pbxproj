@@ -13,6 +13,8 @@
 		A82E3FAE210333DF005CE418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A82E3FAD210333DF005CE418 /* Assets.xcassets */; };
 		A82E3FB1210333DF005CE418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82E3FAF210333DF005CE418 /* LaunchScreen.storyboard */; };
 		A82E3FB4210333DF005CE418 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FB3210333DF005CE418 /* main.m */; };
+		A82E3FBC210337B4005CE418 /* TimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FBB210337B4005CE418 /* TimeManager.m */; };
+		A82E3FC021033948005CE418 /* OriginRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FBF21033948005CE418 /* OriginRequestVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		A82E3FB0210333DF005CE418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A82E3FB2210333DF005CE418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A82E3FB3210333DF005CE418 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A82E3FBA210337B4005CE418 /* TimeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeManager.h; sourceTree = "<group>"; };
+		A82E3FBB210337B4005CE418 /* TimeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManager.m; sourceTree = "<group>"; };
+		A82E3FBE21033948005CE418 /* OriginRequestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginRequestVC.h; sourceTree = "<group>"; };
+		A82E3FBF21033948005CE418 /* OriginRequestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginRequestVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +64,13 @@
 		A82E3FA3210333DD005CE418 /* webViewLoadTest */ = {
 			isa = PBXGroup;
 			children = (
+				A82E3FBD210338D1005CE418 /* vc */,
 				A82E3FA4210333DD005CE418 /* AppDelegate.h */,
 				A82E3FA5210333DD005CE418 /* AppDelegate.m */,
 				A82E3FA7210333DD005CE418 /* ViewController.h */,
 				A82E3FA8210333DD005CE418 /* ViewController.m */,
+				A82E3FBA210337B4005CE418 /* TimeManager.h */,
+				A82E3FBB210337B4005CE418 /* TimeManager.m */,
 				A82E3FAA210333DD005CE418 /* Main.storyboard */,
 				A82E3FAD210333DF005CE418 /* Assets.xcassets */,
 				A82E3FAF210333DF005CE418 /* LaunchScreen.storyboard */,
@@ -69,6 +78,15 @@
 				A82E3FB3210333DF005CE418 /* main.m */,
 			);
 			path = webViewLoadTest;
+			sourceTree = "<group>";
+		};
+		A82E3FBD210338D1005CE418 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				A82E3FBE21033948005CE418 /* OriginRequestVC.h */,
+				A82E3FBF21033948005CE418 /* OriginRequestVC.m */,
+			);
+			path = vc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +161,9 @@
 			files = (
 				A82E3FA9210333DD005CE418 /* ViewController.m in Sources */,
 				A82E3FB4210333DF005CE418 /* main.m in Sources */,
+				A82E3FBC210337B4005CE418 /* TimeManager.m in Sources */,
 				A82E3FA6210333DD005CE418 /* AppDelegate.m in Sources */,
+				A82E3FC021033948005CE418 /* OriginRequestVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
