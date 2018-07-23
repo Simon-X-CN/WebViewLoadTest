@@ -16,6 +16,8 @@
 		A82E3FBC210337B4005CE418 /* TimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FBB210337B4005CE418 /* TimeManager.m */; };
 		A82E3FC021033948005CE418 /* OriginRequestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FBF21033948005CE418 /* OriginRequestVC.m */; };
 		A82E3FC321056175005CE418 /* DownloadTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FC221056175005CE418 /* DownloadTaskVC.m */; };
+		A82E3FC621057B39005CE418 /* DownMoveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FC521057B39005CE418 /* DownMoveVC.m */; };
+		A82E3FC921057C33005CE418 /* NSString+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A82E3FC821057C33005CE418 /* NSString+Add.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		A82E3FBF21033948005CE418 /* OriginRequestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginRequestVC.m; sourceTree = "<group>"; };
 		A82E3FC121056175005CE418 /* DownloadTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTaskVC.h; sourceTree = "<group>"; };
 		A82E3FC221056175005CE418 /* DownloadTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTaskVC.m; sourceTree = "<group>"; };
+		A82E3FC421057B39005CE418 /* DownMoveVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownMoveVC.h; sourceTree = "<group>"; };
+		A82E3FC521057B39005CE418 /* DownMoveVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownMoveVC.m; sourceTree = "<group>"; };
+		A82E3FC721057C33005CE418 /* NSString+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Add.h"; sourceTree = "<group>"; };
+		A82E3FC821057C33005CE418 /* NSString+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Add.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +73,12 @@
 		A82E3FA3210333DD005CE418 /* webViewLoadTest */ = {
 			isa = PBXGroup;
 			children = (
+				A82E3FCA21057D30005CE418 /* support */,
 				A82E3FBD210338D1005CE418 /* vc */,
 				A82E3FA4210333DD005CE418 /* AppDelegate.h */,
 				A82E3FA5210333DD005CE418 /* AppDelegate.m */,
 				A82E3FA7210333DD005CE418 /* ViewController.h */,
 				A82E3FA8210333DD005CE418 /* ViewController.m */,
-				A82E3FBA210337B4005CE418 /* TimeManager.h */,
-				A82E3FBB210337B4005CE418 /* TimeManager.m */,
 				A82E3FAA210333DD005CE418 /* Main.storyboard */,
 				A82E3FAD210333DF005CE418 /* Assets.xcassets */,
 				A82E3FAF210333DF005CE418 /* LaunchScreen.storyboard */,
@@ -90,8 +95,21 @@
 				A82E3FBF21033948005CE418 /* OriginRequestVC.m */,
 				A82E3FC121056175005CE418 /* DownloadTaskVC.h */,
 				A82E3FC221056175005CE418 /* DownloadTaskVC.m */,
+				A82E3FC421057B39005CE418 /* DownMoveVC.h */,
+				A82E3FC521057B39005CE418 /* DownMoveVC.m */,
 			);
 			path = vc;
+			sourceTree = "<group>";
+		};
+		A82E3FCA21057D30005CE418 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				A82E3FBA210337B4005CE418 /* TimeManager.h */,
+				A82E3FBB210337B4005CE418 /* TimeManager.m */,
+				A82E3FC721057C33005CE418 /* NSString+Add.h */,
+				A82E3FC821057C33005CE418 /* NSString+Add.m */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82E3FC621057B39005CE418 /* DownMoveVC.m in Sources */,
 				A82E3FA9210333DD005CE418 /* ViewController.m in Sources */,
 				A82E3FC321056175005CE418 /* DownloadTaskVC.m in Sources */,
 				A82E3FB4210333DF005CE418 /* main.m in Sources */,
 				A82E3FBC210337B4005CE418 /* TimeManager.m in Sources */,
+				A82E3FC921057C33005CE418 /* NSString+Add.m in Sources */,
 				A82E3FA6210333DD005CE418 /* AppDelegate.m in Sources */,
 				A82E3FC021033948005CE418 /* OriginRequestVC.m in Sources */,
 			);
@@ -310,7 +330,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2Z48GH7ZW;
 				INFOPLIST_FILE = webViewLoadTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +348,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2Z48GH7ZW;
 				INFOPLIST_FILE = webViewLoadTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

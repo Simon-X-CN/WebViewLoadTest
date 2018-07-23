@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "NSString+Add.h"
 
 #define ScreenHeight   [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth    [[UIScreen mainScreen] bounds].size.width

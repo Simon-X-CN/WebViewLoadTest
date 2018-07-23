@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "OriginRequestVC.h"
 #import "DownloadTaskVC.h"
+#import "DownMoveVC.h"
 
 @interface ViewController ()
 
@@ -22,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.url = @"https://github.com/";
     
-    NSArray *txtAry = @[@"Just Request", @"NSURLSessionDownloadTask"];
+    NSArray *txtAry = @[@"Just Request", @"NSURLSessionDownloadTask", @"DownloadTask + Move"];
     
     NSInteger idx = 0;
     for (NSString *title in txtAry) {
@@ -46,6 +47,13 @@
         case 1: {
             [TimeManager refreshTime];
             DownloadTaskVC *vc = [[DownloadTaskVC alloc] init];
+            vc.url = self.url;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2: {
+            [TimeManager refreshTime];
+            DownMoveVC *vc = [[DownMoveVC alloc] init];
             vc.url = self.url;
             [self.navigationController pushViewController:vc animated:YES];
             break;
