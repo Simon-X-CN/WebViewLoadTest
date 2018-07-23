@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "OriginRequestVC.h"
+#import "DownloadTaskVC.h"
 
 @interface ViewController ()
 
@@ -21,11 +22,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.url = @"https://github.com/";
     
-    NSArray *txtAry = @[@"Just Request"];
+    NSArray *txtAry = @[@"Just Request", @"NSURLSessionDownloadTask"];
     
     NSInteger idx = 0;
     for (NSString *title in txtAry) {
-        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 50*idx + 88, 200, 50)];
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 50*idx + 88, ScreenWidth, 50)];
         [btn setTitle:title forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(choseBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = idx++;
@@ -38,6 +39,13 @@
         case 0: {
             [TimeManager refreshTime];
             OriginRequestVC *vc = [[OriginRequestVC alloc] init];
+            vc.url = self.url;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 1: {
+            [TimeManager refreshTime];
+            DownloadTaskVC *vc = [[DownloadTaskVC alloc] init];
             vc.url = self.url;
             [self.navigationController pushViewController:vc animated:YES];
             break;
